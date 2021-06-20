@@ -36,7 +36,11 @@ class ViewController: UIViewController {
                     if let user = dummyDatabase.first(where: { user in
                         user.username == username && user.password == password
                     }) {
-                        presentAlert(with: "You successfully logged in as \(user.username)")
+                        /*let storyBoard: UIStoryboard = UIStoryboard(name: "perfil", bundle: nil)
+                        let perfilViewController = storyBoard.instantiateViewController(withIdentifier: "perfil") as! PerfilViewController
+                        self.present(perfilViewController, animated: true, completion: nil)
+ */
+                        //presentAlert(with: "You successfully logged in as \(user.username)")
                         
                     } else {
                         throw LoginError.invalidCredentials
