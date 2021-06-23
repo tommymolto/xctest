@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -14,21 +13,22 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TestesIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="AtG-bN-G8E">
-                                <rect key="frame" x="40" y="322" width="334" height="252"/>
+                                <rect key="frame" x="40" y="207.5" width="295" height="252"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bem Vindo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hpn-ca-udh">
-                                        <rect key="frame" x="74" y="0.0" width="186" height="48"/>
+                                        <rect key="frame" x="54.5" y="0.0" width="186" height="48"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FOd-1N-Q9m">
-                                        <rect key="frame" x="0.0" y="78" width="334" height="35"/>
+                                        <rect key="frame" x="0.0" y="78" width="295" height="35"/>
                                         <color key="backgroundColor" systemColor="viewFlipsideBackgroundColor"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="Username"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="7Wj-mT-1cY"/>
                                         </constraints>
@@ -36,18 +36,19 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Scy-Th-Oxy">
-                                        <rect key="frame" x="0.0" y="143" width="334" height="35"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" restorationIdentifier="Password" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Scy-Th-Oxy">
+                                        <rect key="frame" x="0.0" y="143" width="295" height="35"/>
                                         <color key="backgroundColor" systemColor="viewFlipsideBackgroundColor"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="Password"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="U0S-o9-vu1"/>
                                         </constraints>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits" textContentType="password"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n8g-l2-y4D">
-                                        <rect key="frame" x="20" y="208" width="294" height="44"/>
+                                        <rect key="frame" x="20" y="208" width="255" height="44"/>
                                         <color key="backgroundColor" red="0.64449673890000003" green="0.48155063390000002" blue="0.89366012809999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="sX7-R6-JAE"/>
@@ -65,6 +66,7 @@
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="FOd-1N-Q9m" secondAttribute="trailing" id="9Tw-6k-8Yg"/>
                                     <constraint firstItem="FOd-1N-Q9m" firstAttribute="leading" secondItem="AtG-bN-G8E" secondAttribute="leading" id="FRg-Yc-5Id"/>
+                                    <constraint firstItem="Scy-Th-Oxy" firstAttribute="leading" secondItem="FOd-1N-Q9m" secondAttribute="trailing" constant="-295" id="KKd-Sa-SP3"/>
                                     <constraint firstItem="n8g-l2-y4D" firstAttribute="leading" secondItem="AtG-bN-G8E" secondAttribute="leading" constant="20" id="QRC-0Z-jQi"/>
                                     <constraint firstAttribute="trailing" secondItem="Scy-Th-Oxy" secondAttribute="trailing" id="qoz-L5-qe8"/>
                                     <constraint firstAttribute="trailing" secondItem="n8g-l2-y4D" secondAttribute="trailing" constant="20" id="tfs-xe-5V9"/>
@@ -92,66 +94,41 @@
         <!--Perfil View Controller-->
         <scene sceneID="m6c-92-lcJ">
             <objects>
-                <viewController storyboardIdentifier="perfil" useStoryboardIdentifierAsRestorationIdentifier="YES" id="yqw-kl-SOG" customClass="PerfilViewController" customModule="TestesIOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="1a8-zc-kD1">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <viewController storyboardIdentifier="perfil" autoresizesArchivedViewToFullSize="NO" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="yqw-kl-SOG" customClass="PerfilViewController" customModule="TestesIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1a8-zc-kD1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="50" id="u2H-K9-2y5">
-                                <rect key="frame" x="86" y="0.0" width="240" height="842"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="HVb-3z-ZNy">
+                                <rect key="frame" x="44" y="-460" width="299" height="1599"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="svp-82-8t8" colorLabel="IBBuiltInLabel-Orange">
-                                        <rect key="frame" x="0.0" y="0.0" width="240" height="396"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="imgPerfil" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rw5-wG-BH5">
-                                                <rect key="frame" x="0.0" y="0.0" width="240" height="396"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <accessibility key="accessibilityConfiguration" hint="imgPerfil" identifier="imgPerfil" label="imgPerfil"/>
-                                                <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="8" trailing="8"/>
-                                            </imageView>
-                                        </subviews>
-                                        <color key="backgroundColor" systemColor="systemGrayColor"/>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hdh-fT-XjQ">
-                                        <rect key="frame" x="0.0" y="446" width="240" height="396"/>
-                                        <subviews>
-                                            <stackView opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="zJH-Cb-nsI">
-                                                <rect key="frame" x="0.0" y="0.0" width="240" height="256"/>
-                                                <subviews>
-                                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YmJ-uX-NNq">
-                                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                                        <subviews>
-                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" restorationIdentifier="nomePerfil" insetsLayoutMarginsFromSafeArea="NO" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="always" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" text="Ola meu povo" textAlignment="center" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kt3-gS-aHW">
-                                                                <rect key="frame" x="0.0" y="0.0" width="99" height="200"/>
-                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                                <accessibility key="accessibilityConfiguration" hint="teste" identifier="nomePerfil" label="teste"/>
-                                                                <viewLayoutGuide key="contentLayoutGuide" id="13o-kM-N44" propertyAccessControl="all"/>
-                                                                <viewLayoutGuide key="frameLayoutGuide" id="o1M-9J-HzQ" propertyAccessControl="all"/>
-                                                                <color key="textColor" systemColor="labelColor"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" textContentType="email"/>
-                                                            </textView>
-                                                        </subviews>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                        <color key="tintColor" systemColor="systemGreenColor"/>
-                                                    </view>
-                                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iMG-ia-rnk">
-                                                        <rect key="frame" x="0.0" y="128" width="240" height="128"/>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                    </view>
-                                                </subviews>
-                                            </stackView>
-                                        </subviews>
-                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                    </view>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="imgPerfil" preservesSuperviewLayoutMargins="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rw5-wG-BH5">
+                                        <rect key="frame" x="0.0" y="0.0" width="299" height="797"/>
+                                        <accessibility key="accessibilityConfiguration" hint="imgPerfil" identifier="imgPerfil" label="imgPerfil"/>
+                                        <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="8" trailing="8"/>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="nomePerfil" insetsLayoutMarginsFromSafeArea="NO" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="always" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" text="Ola meu povo" textAlignment="center" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kt3-gS-aHW">
+                                        <rect key="frame" x="0.0" y="802" width="299" height="797"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <accessibility key="accessibilityConfiguration" hint="teste" identifier="nomePerfil" label="teste"/>
+                                        <viewLayoutGuide key="contentLayoutGuide" id="13o-kM-N44" propertyAccessControl="all"/>
+                                        <viewLayoutGuide key="frameLayoutGuide" id="o1M-9J-HzQ" propertyAccessControl="all"/>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" textContentType="email"/>
+                                    </textView>
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="T7K-Ma-uL5"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <viewLayoutGuide key="safeArea" id="DKB-OQ-HI0"/>
+                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="HVb-3z-ZNy" secondAttribute="trailing" constant="16" id="0mg-C6-sC7"/>
+                            <constraint firstItem="HVb-3z-ZNy" firstAttribute="centerX" secondItem="1a8-zc-kD1" secondAttribute="centerX" constant="6" id="8a8-pl-fob"/>
+                            <constraint firstItem="HVb-3z-ZNy" firstAttribute="centerY" secondItem="1a8-zc-kD1" secondAttribute="centerY" constant="6" id="gk8-D7-plc"/>
+                        </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" id="wif-ej-jP4"/>
                     <connections>
                         <outlet property="imagemPerfil" destination="Rw5-wG-BH5" id="Qtj-yS-klq"/>
@@ -160,25 +137,19 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Ow-Bd-d6X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="811.59420289855075" y="147.99107142857142"/>
+            <point key="canvasLocation" x="810.39999999999998" y="147.97601199400302"/>
         </scene>
     </scenes>
-    <color key="tintColor" systemColor="quaternarySystemFillColor"/>
+    <color key="tintColor" systemColor="systemBlueColor"/>
     <resources>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="quaternarySystemFillColor">
-            <color red="0.45490196078431372" green="0.45490196078431372" blue="0.50196078431372548" alpha="0.080000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemGrayColor">
-            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="viewFlipsideBackgroundColor">
             <color red="0.1215686274509804" green="0.12941176470588239" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
