@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController , UITextFieldDelegate {
 
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -49,6 +49,16 @@ class ViewController: UIViewController {
                 } catch {
                     present(error)
                 }
+    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+            textField.resignFirstResponder()
+            self.view.endEditing(true)
+
+            return true
+        }
+    override func viewDidLoad() {
+        passwordTextField.delegate = self
+        usernameTextField.delegate = self
     }
 }
 

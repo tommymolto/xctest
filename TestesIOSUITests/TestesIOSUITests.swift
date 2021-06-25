@@ -51,6 +51,7 @@ class TestesIOSUITests: XCTestCase {
         let senha = "password"
         let app = XCUIApplication()
         app.launch()
+
         let usernameField = app.textFields["Username"]
         XCTAssertTrue(usernameField.exists)
         usernameField.tap()
@@ -59,12 +60,17 @@ class TestesIOSUITests: XCTestCase {
         let passwordTextField = app.secureTextFields["Password"]
         XCTAssertTrue(passwordTextField.exists)
 
-        passwordTextField.doubleTap()
+        passwordTextField.tap()
         passwordTextField.typeText(senha)
+        
+
+        if app.keyboards.buttons["continue"].exists {
+            app.keyboards.buttons["continue"].tap()
+        }
         app.buttons["Login"].tap()
         let texto = app.textViews["nomePerfil"]
         
-        XCTAssertTrue(texto.value as? String == "Ola meu povo")
+        XCTAssertTrue(texto.value as? String == "Ola")
         
     }
     
@@ -82,8 +88,14 @@ class TestesIOSUITests: XCTestCase {
 
         passwordTextField.tap()
         passwordTextField.typeText(senha)
+        if app.keyboards.buttons["continue"].exists {
+            app.keyboards.buttons["continue"].tap()
+        }
         app.buttons["Login"].tap()
         let erro = error.errorDescription!
+        print(error)
+        print(erro)
+        print(app.alerts.count)
         //let elementsQuery = app.alerts[erro].firstMatch
         let elementsQuery = app.alerts.scrollViews.otherElements.staticTexts[erro].firstMatch
         XCTAssertTrue(elementsQuery.exists)
